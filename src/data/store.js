@@ -4,6 +4,8 @@
  * the product catalogue here. Every UI module reads from this file.
  */
 const baseUrl = import.meta.env.BASE_URL || '/';
+const standardSizes = ['39', '40', '41', '42', '43', '44', '45'];
+const asset = (path) => `${baseUrl}${String(path).replace(/^\/+/, '')}`;
 
 export const store = {
   brand: {
