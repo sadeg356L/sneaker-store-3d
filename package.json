@@ -1,0 +1,20 @@
+{
+  "name": "sneaker-store-3d",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "KHOTWA — a light, editorial 3D sneaker storefront.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "gsap": "3.15.0",
+    "lenis": "1.3.27",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "vite": "8.3.5"
+  }
+}
