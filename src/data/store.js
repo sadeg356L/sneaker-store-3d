@@ -3,6 +3,8 @@
  * Change the WhatsApp number, shipping copy, offer, currency, 3D model and
  * the product catalogue here. Every UI module reads from this file.
  */
+const baseUrl = import.meta.env.BASE_URL || '/';
+
 export const store = {
   brand: {
     latin: 'KHOTWA',
@@ -33,20 +35,13 @@ export const store = {
   // The hero GLB. Replace the file at this path, or point this elsewhere.
   // Rotation/camera values are safe defaults for the included shoe.
   model: {
-    url: '/models/shoe.glb',
+    url: `${baseUrl}models/shoe.glb`,
     rotation: Math.PI / 2 - 0.4,
     camera: { azimuth: -0.14, elevation: 0.16, margin: 1.06 },
     scrollTurns: 0.625,
   },
 };
 
-/**
- * Product catalogue.
- * Prices are in TND; the first colour is the card cover. Images live in
- * /public/images. Keep this list, the WhatsApp number and the store settings
- * in this one file so the whole shop can be updated from a single place.
- */
-const standardSizes = ['39', '40', '41', '42', '43', '44', '45'];
 
 export const products = [
   {
@@ -59,10 +54,10 @@ export const products = [
     badge: 'جديد',
     featured: true,
     bestseller: false,
-    image: '/images/product-01.webp',
+    image: asset('images/product-01.webp'),
     colors: [
-      { id: 'ivory', name: 'عاجي', hex: '#F1ECE3', image: '/images/product-01.webp' },
-      { id: 'clay', name: 'طوبي', hex: '#D97745', image: '/images/product-01-alt.webp' },
+      { id: 'ivory', name: 'عاجي', hex: '#F1ECE3', image: asset('images/product-01.webp') },
+      { id: 'clay', name: 'طوبي', hex: '#D97745', image: asset('images/product-01-alt.webp') },
     ],
     sizes: standardSizes,
     summary: 'خط يومي هادئ بلون عاجي، ونعل مرن يرافقك من الصباح إلى المساء.',
@@ -78,10 +73,10 @@ export const products = [
     badge: 'إصدار محدود',
     featured: true,
     bestseller: false,
-    image: '/images/product-02.webp',
+    image: asset('images/product-02.webp'),
     colors: [
-      { id: 'clay', name: 'طوبي', hex: '#D97745', image: '/images/product-02.webp' },
-      { id: 'ivory', name: 'عاجي', hex: '#F1ECE3', image: '/images/product-02-alt.webp' },
+      { id: 'clay', name: 'طوبي', hex: '#D97745', image: asset('images/product-02.webp') },
+      { id: 'ivory', name: 'عاجي', hex: '#F1ECE3', image: asset('images/product-02-alt.webp') },
     ],
     sizes: standardSizes,
     summary: 'لمسة طوبية دافئة على قالب خفيف، مع تفاصيل تُرى عن قرب.',
@@ -97,10 +92,10 @@ export const products = [
     badge: 'وصل حديثًا',
     featured: true,
     bestseller: false,
-    image: '/images/product-03.webp',
+    image: asset('images/product-03.webp'),
     colors: [
-      { id: 'sand', name: 'رملي', hex: '#D8C4AC', image: '/images/product-03.webp' },
-      { id: 'clay', name: 'طوبي', hex: '#D97745', image: '/images/product-03-alt.webp' },
+      { id: 'sand', name: 'رملي', hex: '#D8C4AC', image: asset('images/product-03.webp') },
+      { id: 'clay', name: 'طوبي', hex: '#D97745', image: asset('images/product-03-alt.webp') },
     ],
     sizes: standardSizes,
     summary: 'درجة رملية محايدة تناسب كل يوم، بتفاصيل هادئة وخامة متنفسة.',
@@ -116,10 +111,10 @@ export const products = [
     badge: 'الأكثر مبيعًا',
     featured: false,
     bestseller: true,
-    image: '/images/product-04.webp',
+    image: asset('images/product-04.webp'),
     colors: [
-      { id: 'ivory', name: 'عاجي', hex: '#F1ECE3', image: '/images/product-04.webp' },
-      { id: 'sand', name: 'رملي', hex: '#D8C4AC', image: '/images/product-04-alt.webp' },
+      { id: 'ivory', name: 'عاجي', hex: '#F1ECE3', image: asset('images/product-04.webp') },
+      { id: 'sand', name: 'رملي', hex: '#D8C4AC', image: asset('images/product-04-alt.webp') },
     ],
     sizes: standardSizes,
     summary: 'القراءة الأحادية للقالب الأصلي: لون واحد، خطوط نظيفة، وحضور هادئ.',
@@ -135,10 +130,10 @@ export const products = [
     badge: 'الأكثر مبيعًا',
     featured: false,
     bestseller: true,
-    image: '/images/product-05.webp',
+    image: asset('images/product-05.webp'),
     colors: [
-      { id: 'clay', name: 'طوبي', hex: '#D97745', image: '/images/product-05.webp' },
-      { id: 'ivory', name: 'عاجي', hex: '#F1ECE3', image: '/images/product-05-alt.webp' },
+      { id: 'clay', name: 'طوبي', hex: '#D97745', image: asset('images/product-05.webp') },
+      { id: 'ivory', name: 'عاجي', hex: '#F1ECE3', image: asset('images/product-05-alt.webp') },
     ],
     sizes: standardSizes,
     summary: 'اللون الذي يكسر الهدوء: طوبي دافئ يليق بالملابس المحايدة.',
@@ -154,10 +149,10 @@ export const products = [
     badge: 'الأكثر مبيعًا',
     featured: false,
     bestseller: true,
-    image: '/images/product-06.webp',
+    image: asset('images/product-06.webp'),
     colors: [
-      { id: 'stone', name: 'حجري', hex: '#CFC7BC', image: '/images/product-06.webp' },
-      { id: 'clay', name: 'طوبي', hex: '#D97745', image: '/images/product-06-alt.webp' },
+      { id: 'stone', name: 'حجري', hex: '#CFC7BC', image: asset('images/product-06.webp') },
+      { id: 'clay', name: 'طوبي', hex: '#D97745', image: asset('images/product-06-alt.webp') },
     ],
     sizes: standardSizes,
     summary: 'لون حجري عملي، مناسب للاستعمال اليومي والتنقل في المدينة.',

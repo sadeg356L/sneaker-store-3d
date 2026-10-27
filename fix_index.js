@@ -1,0 +1,11 @@
+const fs = require('fs');
+const f = 'C:/Users/TPC/Documents/Projet par défaut/sneaker-store-3d/index.html';
+let c = fs.readFileSync(f, 'utf8');
+c = c.split('src="/images/').join('src="./images/');
+c = c.split('href="/images/').join('href="./images/');
+c = c.split('content="/images/').join('content="./images/');
+c = c.split('href="/fonts/').join('href="./fonts/');
+c = c.split('href="/favicon.svg"').join('href="./favicon.svg"');
+c = c.split('href="/src/').join('href="./src/');
+fs.writeFileSync(f, c);
+console.log('done');
